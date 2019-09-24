@@ -40,8 +40,16 @@ Route::get('/test',function(){
 });
 
 Route::get('History', function(){
-    $orders = Orders::all();
-    $total = 0;
+    $user = Auth::user()->name;
+    $restaurant = Restaurant::where('name','=',$user)->get();
+    $id = ($restaurant[0])->id;
+    $orders = Orders::where('Restaurant_id','=',$id)->get();
+    $total = 0.0;
+    foreach ($orders as $o){
+        $quantity = $o->quantity;
+        $price = $o->price;
+        $total += ($quantity * $price);
+    }
     return view('site.history')->with('orders',$orders)->with('total',$total);
 });
 

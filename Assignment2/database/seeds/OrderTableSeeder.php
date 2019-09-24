@@ -26,7 +26,7 @@ class OrderTableSeeder extends Seeder
             'item_name' => 'Ceaser Wrap',
             'price' => '7.50',
             'quantity' => '4',
-            'Restaurant_id' => 2,
+            'Restaurant_id' => 1,
             'updated_at' => DB::raw('CURRENT_TIMESTAMP'),
         ]);
         DB::table('orders')->insert([

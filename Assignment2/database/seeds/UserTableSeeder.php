@@ -32,7 +32,7 @@ class UserTableSeeder extends Seeder
             'name' => 'user3',
             'email' =>'user3@gmail.com',
             'address' => '25 jump street, NW',
-            'role' => 'Restaurant',
+            'role' => 'Customer',
             'password' => bcrypt('123456')
         ]);
         DB::table('users')->insert([

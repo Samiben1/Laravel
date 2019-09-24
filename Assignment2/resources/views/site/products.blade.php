@@ -16,10 +16,14 @@
     </div>
     @if (Auth::guest())
     @elseif ((Auth::user()->role)=="Restaurant")
-      <form action="create">
-        <input type="hidden" value="{{$rid}}" name="id" >
-        <a href={{url("restaurant/create")}}><button class="btn btn-success" value="submit">Add Item</button></a>
-      </form>
+      @if ((Auth::user()->name) == "{$restaurant->name}")
+        <form action="create">
+          <input type="hidden" value="{{$rid}}" name="id" >
+          <a href={{url("restaurant/create")}}><button class="btn btn-success" value="submit">Add Item</button></a>
+        </form>
+      @else
+
+      @endif
     @endif
     
     <hr class="featurette-divider">
@@ -44,10 +48,17 @@
                 <h4>{{$product->name}}</h4>
               </a>
             @elseif ((Auth::user()->role)=="Restaurant")
-              <a href="{{url("restaurant/$product->id/edit")}}">
-                <div id="User-icon1" style="background-image:url('images/{{$restaurant->pro_pic}}')"></div><br>
-                <h4>{{$product->name}}</h4>
-              </a>
+              @if ((Auth::user()->name) == "{$restaurant->name}")
+                <a href="{{url("restaurant/$product->id/edit")}}">
+                  <div id="User-icon1" style="background-image:url('images/{{$restaurant->pro_pic}}')"></div><br>
+                  <h4>{{$product->name}}</h4>
+                </a>
+              @else
+                <a href="{{url("product/$product->id")}}">
+                  <div id="User-icon1" style="background-image:url('images/{{$restaurant->pro_pic}}')"></div><br>
+                  <h4>{{$product->name}}</h4>
+                </a>
+              @endif
             @endif
           @endif
 
