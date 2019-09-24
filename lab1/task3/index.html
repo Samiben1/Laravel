@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf8>
+        <title>Social Network</title>
+        <link rel="stylesheet" type="text/css" href="cssfile.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row" id="navbar" >
+                <div class="col-md-6">Social Media</div>
+                <div class="col-md-2"><a href="index.html">Photoes</a></div>
+                <div class="col-md-2"><a href="index.html">Friends</a></div>
+                <div class="col-md-2"><a href="index.html">Login</a></div>
+            </div>
+            <div class="row" id="contents" >
+                    <div class="col-md-6">
+                        <label>Name:</label><br><input type="text" placeholder="e.g John Wick"><br>
+                        <label>Message:</label><br><input type="text" placeholder="Enter message here..." id ="message-container"></label><br>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>John Smith</h3>
+                        <div id="posts">
+                            <div class="row">
+                                <div class="col-md-6"><img src="portrait.jpg" width="160" height="160"></div>
+                                <div class="col-md-4">7/7/2019 4.30pm
+                                    <p>"A beautiful portrait is worth a thousand pictures"</p>
+                                </div><br>
+                            </div>
+                        </div><br>
+                        <div id="posts">
+                            <div class="row">
+                                <div class="col-md-6"><img src="landscape.jpg" width="160" height="160"></div>
+                                <div class="col-md-4">6/7/2019 3.45pm
+                                        <p>"Where the land touches the sea"</p>
+                                </div><br>
+                            </div>
+                        </div><br>
+                        <div id="posts">
+                            <div class="row">
+                                <div class="col-md-6"><img src="night-lights.png" width="160" height="160"></div>
+                                <div class="col-md-4">7/7/2019 7.00pm
+                                        <p>"Night is often beautiful with the sparkel of the night lights"</p>
+                                </div><br>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </body>
+</html>

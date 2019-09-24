@@ -1,0 +1,18 @@
+#navbar{
+    
+    border-color: black;
+    border-style: solid;
+}
+#content{
+    border-color: black;
+    border-style: solid;
+    padding: 10pt;
+}
+
+#posts{
+    border-color: black;
+    border-style: solid;
+    margin: 50pt;
+    padding: 20pt;
+    
+}
